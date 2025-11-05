@@ -1,5 +1,5 @@
 const about = (req, res) => {
-    res.render('about');
+    res.render('about', {title: "About - Travlr Getaways Web Template"});
 };
 
 module.exports = {

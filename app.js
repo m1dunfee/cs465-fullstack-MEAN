@@ -14,15 +14,22 @@ var roomsRouter = require('./app_server/routes/rooms')
 var travelRouter = require('./app_server/routes/travel');
 // var usersRouter = require('./app_server/routes/users');
 
-
 var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'app_server', 'views'));
+console.log('Views dir:', path.join(__dirname, 'app_server', 'views'));
+app.use(express.static(path.join(__dirname, 'public')));
+console.log('Views dir:', path.join(__dirname, 'public'));
+
 app.set('view engine', 'hbs');
 
+app.locals.layout = 'layouts/layout';
+
 // register handlebars partials
-handlebars.registerPartials(__dirname + '/app_server/views/parials');
+handlebars.registerPartials(path.join(__dirname, 'app_server', 'views', 'partials'));
+console.log('Partials dir:', path.join(__dirname, 'app_server', 'views', 'partials'));
+
 
 app.use(logger('dev'));
 app.use(express.json());

@@ -1,5 +1,5 @@
 const rooms = (req,res) => {
-    res.render('rooms');
+    res.render('rooms', {title: "Rooms - Travlr Getaways Web Template"});
 };
 
 module.exports = {

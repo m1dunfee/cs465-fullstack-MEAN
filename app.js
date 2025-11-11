@@ -1,20 +1,20 @@
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
-var handlebars = require('hbs');
+let createError = require('http-errors');
+let express = require('express');
+let path = require('path');
+let cookieParser = require('cookie-parser');
+let logger = require('morgan');
+let handlebars = require('hbs');
 
-var aboutRouter = require('./app_server/routes/about')
-var contactRouter = require('./app_server/routes/contact')
-var indexRouter = require('./app_server/routes/index');
-var mealsRouter = require('./app_server/routes/meals')
-var newsRouter = require('./app_server/routes/news')
-var roomsRouter = require('./app_server/routes/rooms')
-var travelRouter = require('./app_server/routes/travel');
-// var usersRouter = require('./app_server/routes/users');
+let aboutRouter = require('./app_server/routes/about')
+let contactRouter = require('./app_server/routes/contact')
+let indexRouter = require('./app_server/routes/index');
+let mealsRouter = require('./app_server/routes/meals')
+let newsRouter = require('./app_server/routes/news')
+let roomsRouter = require('./app_server/routes/rooms')
+let travelRouter = require('./app_server/routes/travel');
+// let usersRouter = require('./app_server/routes/users');
 
-var app = express();
+let app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'app_server', 'views'));

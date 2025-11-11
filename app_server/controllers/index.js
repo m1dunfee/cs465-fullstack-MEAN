@@ -1,5 +1,8 @@
+let fs = require('fs');
+let state = JSON.parse(fs.readFileSync('./data/index.json','utf8'))
+
 const index = (req, res) => {
-    res.render('index', {title: 'Travlr Getaways'});//this references index.hbs in that first param type string (located in view folder)
+    res.render('index', {title: 'Travlr Getaways', state});//this references index.hbs in that first param type string (located in view folder)
 };
 
 module.exports = {

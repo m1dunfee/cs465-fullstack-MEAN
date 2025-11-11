@@ -3,32 +3,31 @@
 		<div id="page">
 			<div id="contents">
 				<div id="adbox">
-					<img src="images/sea-sound.jpg" alt="Img">
-					<h1>Enjoy the Summer with Us!</h1>
+					<img src="{{state.jumbotron.image}}" alt="Img">
+					<h1>{{state.jumbotron.title}}</h1>
 					<p>
-						This website template has been designed by <a href="http://www.freewebsitetemplates.com/">Free Website Templates</a> for you, for free. You can replace all this text with your own text. You can remove any link to our website from this website template, you're free to use this website template without linking back to us. If you're having problems editing this website template, then don't hesitate to ask for help on the <a href="http://www.freewebsitetemplates.com/forums/">Forum</a>.
+						{{state.jumbotron.paragraph1}}
+						<a href="http://www.freewebsitetemplates.com/">{{state.jumbotron.anchor1}}</a>
+						 {{state.jumbotron.paragraph2}} 
+						 <a href="http://www.freewebsitetemplates.com/forums/">{{state.jumbotron.anchor1}}</a>.
 					</p>
 				</div>
 				<div id="main">
 					<div class="box">
 						<div>
 							<div>
-								<h3>Latest Blog</h3>
+								<h3>{{state.blog.title}}</h3>
 								<ul>
+									{{#each state.blog.posts}}
 									<li>
-										<h4><a href="news.html">2023 Best Beaches Contest Winners</a></h4>
-										<span>April 02, 2023</span>
+										<h4><a href="news">{{this.title}}</a></h4>
+										<span>{{this.date}}</span>
+										<span>{{this.anchortag}}</span>
 										<p>
-											Integer magna leo, posuere et dignissim vitae, porttitor at odio. Pellentesque a metus nec magna placerat volutpat. Nunc nisi mi, elementum sit amet...
+											{{paragraph}}
 										</p>
 									</li>
-									<li>
-										<h4><a href="news.html">Top 10 Diving Spots</a></h4>
-										<span>May 29, 2023</span>
-										<p>
-											Maecenas scelerisque odio quis arcu fringilla malesuada. Nulla facilisi. In libero nulla, fermentum ut pretium ac, pharetra et eros...
-										</p>
-									</li>
+									{{/each}}
 								</ul>
 							</div>
 						</div>
@@ -36,9 +35,10 @@
 					<div id="testimonials" class="box">
 						<div>
 							<div>
-								<h3>Testimonials</h3>
+								<h3>{{state.testimonials.title}}</h3>
 								<p>
-									“In hac habitasse platea dictumst. Integer purus justo, egestas eu consectetur eu, cursus in tortor. Quisque nec nunc ac mi ultrices iaculis. Aenean quis elit mauris, nec vestibulum lorem.” <span>- <a href="index.html">Juan De La Cruz</a></span>
+									{{state.testimonials.paragraph}}
+									<span>- <a href="index.html">{{state.testimonials.span}}</a></span>
 								</p>
 							</div>
 						</div>
@@ -46,13 +46,13 @@
 				</div>
 				<div id="sidebar">
 					<div class="section">
-						<a href="rooms.html"><img src="images/rooms.png" alt="Img"></a>
+						<a href="rooms"><img src="{{state.images.rooms}}" alt="Img"></a>
 					</div>
 					<div class="section">
-						<a href="dives.html"><img src="images/dive-site.png" alt="Img"></a>
+						<a href="dives"><img src="{{state.images.dives}}" alt="Img"></a>
 					</div>
 					<div class="section">
-						<a href="foods.html"><img src="images/food.png" alt="Img"></a>
+						<a href="foods"><img src="{{state.images.section}}" alt="Img"></a>
 					</div>
 				</div>
 			</div>

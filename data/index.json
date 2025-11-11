@@ -1,0 +1,35 @@
+{
+  "jumbotron": {
+    "image": "images/sea-sound.jpg",
+    "title": "Enjoy the Summer with Us!",
+    "paragraph1": "This website template has been designed by",
+    "paragraph2": "for you, for free. You can replace all this text with your own text. You can remove any link to our website from this website template, you're free to use this website template without linking back to us. If you're having problems editing this website template, then don't hesitate to ask for help on the ",
+    "anchor1": "Free Website Templates",
+    "anchor2": "Forum"
+  },
+  "blog": {
+    "title": "Latest Blog",
+    "posts": [
+      {
+        "anchortag": "2023 Best Beaches Contest Winners",
+        "date": "April 02, 2023",
+        "paragraph": "Maecenas scelerisque odio quis arcu fringilla malesuada. Nulla facilisi. In libero nulla, fermentum ut pretium ac, pharetra et eros..."
+      },
+      {
+        "anchortag": "2023 Best Beaches Contest Winners",
+        "date": "April 02, 2023",
+        "paragraph": "Maecenas scelerisque odio quis arcu fringilla malesuada. Nulla facilisi. In libero nulla, fermentum ut pretium ac, pharetra et eros..."
+      }
+    ]
+  },
+  "testimonials":{
+    "title": "Testimonials",
+    "paragraph": "In hac habitasse platea dictumst. Integer purus justo, egestas eu consectetur eu, cursus in tortor. Quisque nec nunc ac mi ultrices iaculis. Aenean quis elit mauris, nec vestibulum lorem.",
+    "span": "Juan De La Cruz"
+  },
+  "images":{
+    "rooms":"images/rooms.png", 
+    "dives":"images/dive-site.png", 
+    "section":"images/food.png"
+}
+}

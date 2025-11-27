@@ -5,6 +5,7 @@ let cookieParser = require('cookie-parser');
 let logger = require('morgan');
 let handlebars = require('hbs');
 
+
 let aboutRouter = require('./app_server/routes/about')
 let contactRouter = require('./app_server/routes/contact')
 let indexRouter = require('./app_server/routes/index');
@@ -13,6 +14,9 @@ let newsRouter = require('./app_server/routes/news')
 let roomsRouter = require('./app_server/routes/rooms')
 let travelRouter = require('./app_server/routes/travel');
 // let usersRouter = require('./app_server/routes/users');
+
+//api files
+let apiRouter = require('./app_api/routes/index');
 
 let app = express();
 
@@ -23,6 +27,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 console.log('Views dir:', path.join(__dirname, 'public'));
 
 app.set('view engine', 'hbs');
+
+//bring in database
+require('./app_api/models/db');
 
 app.locals.layout = 'layouts/layout';
 
@@ -45,6 +52,9 @@ app.use('/news', newsRouter);
 app.use('/rooms', roomsRouter);
 app.use('/travel', travelRouter);
 //app.use('/user', userRouter); // keep off until I find where the view is 
+
+//api endpoints
+app.use('/api', apiRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

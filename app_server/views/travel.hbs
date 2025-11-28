@@ -10,6 +10,7 @@
 								{{!-- loops over the data.json file matching this files name --}}
 								{{#each state}}
 								<li>
+									{{!-- <a href="/api/travel/{{this.code}}... could work as well" --}}
 									<a href="travel"><img src="images/{{this.image}}" alt="Img"></a>
 									<h2><a href="travel">{{this.name}}</a></h2>
 									<p>{{this.description}}</p>

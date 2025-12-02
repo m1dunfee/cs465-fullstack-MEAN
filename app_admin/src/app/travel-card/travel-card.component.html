@@ -1,0 +1,15 @@
+<div class="card ml-4 primary" style="width: 18rem;">
+    <div class="card-header">{{travel.name}}</div>
+    <img [src]="'/images/' + travel.image" 
+        alt="travel thumbnail" 
+        class="card-img-top">
+        <div class="card-body">
+            <!-- good practice for piping and updating these docs later. -->
+            <!-- <p class="card-subtitle mt-3 mb-3 test-muted">
+                {{travel.length}} only {{trip.perPerson|currency:'USD':'symbol'}} per peson
+            </p> -->
+            <p class="card-text">
+                {{travel.description}}
+            </p>
+        </div>
+</div>

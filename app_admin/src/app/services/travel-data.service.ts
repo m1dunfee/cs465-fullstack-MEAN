@@ -19,4 +19,14 @@ export class TravelDataService {
   addTravels(formData: Travel) : Observable<Travel>{
     return this.http.post<Travel>(this.url, formData)
   }
+
+  getTravel(travelCode: string) : Observable<Travel[]>{
+    //console.log('inside getTravel);
+    return this.http.get<Travel[]>(this.url + '/' + travelCode);
+  }
+
+  updateTravel(formData: Travel) : Observable<Travel>{
+    //console.log('inside getTravel);
+    return this.http.put<Travel>(this.url + '/' + formData.code, formData);
+  }
 }

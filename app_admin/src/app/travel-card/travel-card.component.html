@@ -5,11 +5,14 @@
         class="card-img-top">
         <div class="card-body">
             <!-- good practice for piping and updating these docs later. -->
-            <!-- <p class="card-subtitle mt-3 mb-3 test-muted">
-                {{travel.length}} only {{trip.perPerson|currency:'USD':'symbol'}} per peson
-            </p> -->
+            <p class="card-subtitle mt-3 mb-3 test-muted">
+                {{travel.length}} only {{travel.perPerson|currency:'USD':'symbol'}} per peson
+            </p>
             <p class="card-text">
                 {{travel.description}}
             </p>
+            <div>
+                <button (click)="editTravel(travel)" class="btn btn-info">Edit Travel</button>
+            </div>
         </div>
 </div>

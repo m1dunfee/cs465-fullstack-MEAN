@@ -1,17 +1,32 @@
 [
-    {
+  {
+    "code": "GR001",
     "name": "Gale Reef",
+    "length": "7 days",
+    "start": "2025-03-15T00:00:00Z",
+    "resort": "Azure Bay Resort",
+    "perPerson": "1299",
     "image": "reef1.jpg",
     "description": "Sed et augue lorem. In sit amet placerat arcu. Mauris volutpat ipsum ac justo mollis vel vestibulum orci gravida. Vestibulum sit amet porttitor odio. Nulla facilisi. Fusce at pretium felis."
-    },
-    {
+  },
+  {
+    "code": "DR002",
     "name": "Dawson's Reef",
+    "length": "5 days",
+    "start": "2025-04-02T00:00:00Z",
+    "resort": "Coral Point Retreat",
+    "perPerson": "999",
     "image": "reef2.jpg",
     "description": "Sed et augue lorem. In sit amet placerat arcu. Mauris volutpat ipsum ac justo mollis vel vestibulum orci gravida. Vestibulum sit amet porttitor odio. Nulla facilisi. Fusce at pretium felis."
-    },   
-    {
+  },
+  {
+    "code": "CR003",
     "name": "Claire's Reef",
+    "length": "10 days",
+    "start": "2025-05-20T00:00:00Z",
+    "resort": "Suncrest Lagoon",
+    "perPerson": "1599",
     "image": "reef3.jpg",
     "description": "Sed et augue lorem. In sit amet placerat arcu. Mauris volutpat ipsum ac justo mollis vel vestibulum orci gravida. Vestibulum sit amet porttitor odio. Nulla facilisi. Fusce at pretium felis."
-    }
+  }
 ]

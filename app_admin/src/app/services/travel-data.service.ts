@@ -10,10 +10,13 @@ import { Travel } from '../models/travel'
 export class TravelDataService {
 
   constructor(private http: HttpClient) { }
+  url = 'http://localhost:3000/api/travel';
 
   getTravels() : Observable<Travel[]> {
-    let url = 'http://localhost:3000/api/travel'
+    return this.http.get<Travel[]>(this.url);
+  }
 
-    return this.http.get<Travel[]>(url);
+  addTravels(formData: Travel) : Observable<Travel>{
+    return this.http.post<Travel>(this.url, formData)
   }
 }

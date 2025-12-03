@@ -1,10 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { travels } from '../data/travels';
+// import { travels } from '../data/travels';
 import { TravelCardComponent } from '../travel-card/travel-card.component';
 
-import { Travel } from '../models/travel'
+import { Travel } from '../models/travel';
 import { TravelDataService } from '../services/travel-data.service';
+
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-travel-listing',
@@ -18,11 +21,14 @@ export class TravelListingComponent implements OnInit {
   travels!: Travel[];
   message: string = '';
 
-
-  constructor(private travelDataService: TravelDataService) {
+  constructor(private travelDataService: TravelDataService, private router: Router) {
     console.log('travel-listing Constructor')
   }
 
+  public addTravels(): void{
+    this.router.navigate(['add-travels'])
+  }
+  
   private getStuff(): void {
     this.travelDataService.getTravels().subscribe({
       next: (value:any) => {

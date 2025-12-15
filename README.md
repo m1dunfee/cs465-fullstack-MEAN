@@ -84,13 +84,14 @@ To run this project locally, follow these steps:
 6.  **Run the Application**
     * Start the API (Root folder):
     ```bash
-      `npm start`
+      npm start
     ```
     Navigate to `http://localhost:3000` to view the user app application.
     
     * Start Angular (Client folder):
     ```bash
-    `cd app_admin && ng serve`
+    cd app_admin
+    ng serve
     ```
     Navigate to `http://localhost:4200` to view the admin app application.
 
@@ -102,3 +103,4 @@ This project was a great experience because it provided a strong understanding o
 
 
 [MIT License](LICENSE)
+
